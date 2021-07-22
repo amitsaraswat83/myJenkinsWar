@@ -1,6 +1,5 @@
 node{
       checkout scm
-      def a = load('a.groovy')
       echo("${env.BUILD_NUMBER}")
       echo("${a.LOADED_BUILD_NUMBER}")
 
