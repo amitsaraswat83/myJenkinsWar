@@ -1,4 +1,8 @@
 node{
+      checkout scm
+      def a = load('a.groovy')
+      echo("${env.BUILD_NUMBER}")
+      echo("${a.LOADED_BUILD_NUMBER}")
 
    def tomcatWeb = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps'
    def tomcatBin = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\bin'
@@ -31,4 +35,5 @@ node{
          bat "${tomcatBin}\\startup.bat"
          sleep(time:100,unit:"SECONDS")
    }
+
 }
